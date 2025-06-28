@@ -65,6 +65,9 @@ export PATH=$HOME/repo/nvshmem_venv/bin:${MPI_HOME}/bin:/home/$USER/repo/downloa
 
 export CPATH=${RDMA_CORE_HOME}/build/include/:${MPI_HOME}/include:${CUDA_HOME}/include:${NCCL_HOME}/include:${NVSHMEM_HOME}/include:$CPATH
 
+# needed in order to ignore some warnings
+export IBV_CONFIG_DIR=$RDMA_CORE_HOME/build/etc/libibverbs.d
+
 
 export PKG_CONFIG_PATH=$USR_HOME/repo/downloads/rdma-core/build/lib/pkgconfig
 export LD_LIBRARY_PATH=$USR_HOME/repo/downloads/rdma-core/build/lib:$LD_LIBRARY_PATH
