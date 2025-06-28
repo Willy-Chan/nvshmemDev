@@ -47,6 +47,8 @@ export CMAKE_PREFIX_PATH=$NVSHMEM_HOME:$CMAKE_PREFIX_PATH
 
 
 export LD_LIBRARY_PATH=${NVSHMEM_HOME}/lib:${UCX_HOME}/lib:${NCCL_HOME}/lib:${MPI_HOME}/lib:${RDMA_CORE_HOME}/build/lib:${CUDA_HOME}/lib64
+# NEEDED: IN PYTHON 3.9 WE ARE USING (pip install nvshmem4py)'s LOCAL COPY OF NVSHMEM LOCATED HERE!!!
+export LD_LIBRARY_PATH=/home/wilchan/.local/lib/python3.9/site-packages/nvidia/nvshmem/lib:$LD_LIBRARY_PATH
 
 
 export PATH=$HOME/repo/nvshmem_venv/bin:${MPI_HOME}/bin:/home/$USER/repo/downloads/bin:${CUDA_HOME}/bin:/lustre/fsw/coreai_libraries_nccl/wilchan/hpc_sdk/Linux_x86_64/2024/comm_libs/mpi/bin/:$PATH
