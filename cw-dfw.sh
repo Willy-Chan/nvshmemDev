@@ -77,3 +77,7 @@ export LDFLAGS="-L$USR_HOME/repo/downloads/rdma-core/build/lib -L$CUDA_HOME/lib6
 export CFLAGS="-I$USR_HOME/repo/downloads/build/include"
 alias cmake="cmake -Wno-dev"
 export LIBRARY_PATH=$CUDA_HOME:$LIBRARY_PATH
+export LIBRARY_PATH=$CUDA_HOME/lib64:$CUDA_HOME/lib64/stubs:$LIBRARY_PATH
+
+
+
